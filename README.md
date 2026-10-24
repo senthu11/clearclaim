@@ -47,10 +47,10 @@ The project virtual environment and dependencies have been installed in this wor
 If PowerShell blocks script execution, use the Python command directly:
 
 ```powershell
-.\.venv\Scripts\python.exe -m streamlit run app.py
+.\.venv\Scripts\python.exe -m streamlit run app.py --server.address 127.0.0.1 --server.port 8503
 ```
 
-Open http://127.0.0.1:8503. This project's Streamlit configuration defaults to port 8503.
+Open http://127.0.0.1:8503 when using the Windows launcher or the command above. The shared Streamlit configuration leaves the address and port to the host; Community Cloud uses its standard port 8501.
 
 For a fresh checkout, Python 3.11 or newer is recommended:
 
