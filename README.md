@@ -1,5 +1,13 @@
 # Medical Billing Fraud Detective
 
+## Public demo deployment
+
+Deploy `streamlit_app.py` from the `main` branch with Python 3.12 on Streamlit Community Cloud. `requirements.txt` supplies Python dependencies; `packages.txt` supplies Linux OCR libraries. No API keys or secrets are required for the complete synthetic review, findings, report and letter workflow. Do not copy local `.env` files into the repository or deployment.
+
+The public entry point enables `CLEARCLAIM_PUBLIC_DEMO=1`. Saved-review creation, listing, opening and deletion are disabled at the storage boundary, so anonymous visitors cannot access a shared saved-review directory. Download exports during the session instead. Use synthetic data only: on a hosted deployment, "local" processing means on the hosting server, not on the visitor's device. Uploaded documents, typed questions and personal details are not sent to an LLM. This educational demo is not a service for real patient data.
+
+The desktop entry point remains `app.py`; its encrypted local saved reviews remain available.
+
 A Python class project with three specialized AI agents, LangGraph orchestration, LangChain integrations, local RAG, and a Streamlit interface. Use synthetic bills only. Every bundled price and billing policy is fictional.
 
 ## Restored Evidence workspace (October 24, 2026)

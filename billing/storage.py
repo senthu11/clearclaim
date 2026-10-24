@@ -12,6 +12,13 @@ from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 
 ROOT = Path(__file__).resolve().parents[1] / '.local-reviews'
 
+def public_demo():
+    return os.getenv('CLEARCLAIM_PUBLIC_DEMO') == '1'
+
+def require_local_storage():
+    if public_demo():
+        raise ValueError('Saved reviews are disabled in the public demo. Download your report instead.')
+
 def cipher(password, salt):
     if len(password) < 12:
         raise ValueError('Use a passphrase of at least 12 characters. It cannot be recovered.')
@@ -24,6 +31,7 @@ def path_for(identifier, root=ROOT):
     return root / (identifier + '.json')
 
 def save(data, password, days=30, root=ROOT):
+    require_local_storage()
     if days not in (1, 7, 30, 90):
         raise ValueError('Invalid retention.')
     salt = os.urandom(16)
@@ -41,6 +49,7 @@ def save(data, password, days=30, root=ROOT):
     return identifier
 
 def list_saved(root=ROOT):
+    require_local_storage()
     items = []
     for path in root.glob('*.json'):
         if not re.fullmatch(r'[a-f0-9]{32}', path.stem):
@@ -56,6 +65,7 @@ def list_saved(root=ROOT):
     return sorted(items, key=lambda x: x['created'], reverse=True)
 
 def load(identifier, password, root=ROOT):
+    require_local_storage()
     try:
         data = json.loads(path_for(identifier, root).read_text(encoding='utf-8'))
         payload = json.loads(cipher(password, base64.b64decode(data['salt'])).decrypt(data['token'].encode()))
@@ -66,4 +76,5 @@ def load(identifier, password, root=ROOT):
         raise ValueError('Unable to unlock: incorrect passphrase or damaged review.') from None
 
 def delete(identifier, root=ROOT):
+    require_local_storage()
     path_for(identifier, root).unlink(missing_ok=True)

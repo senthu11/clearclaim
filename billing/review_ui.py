@@ -61,6 +61,9 @@ def finding_decision(finding):
     st.caption('Your assessment is separate from the original audit; it does not recalculate the illustrative reduction.')
 
 def save_review(data):
+    if storage.public_demo():
+        st.caption('Public demo: download your report or letter. Server-side saved reviews are disabled.')
+        return
     with st.expander('Save an encrypted review on this computer'):
         st.caption('Optional. Saves confirmed charges, findings, decisions and payment information. Original uploads and chat are excluded. Expired files are deleted when Saved reviews is opened; no background deletion service runs. Deleting files does not erase external backups.')
         with st.form('review_save'):
@@ -74,6 +77,9 @@ def save_review(data):
                     st.error(str(error))
 
 def saved_reviews():
+    if storage.public_demo():
+        st.info('Saved reviews are disabled in the public demo. Use the report downloads during your session.')
+        return
     st.title('Saved reviews')
     st.caption('Encrypted snapshots on this computer. A passphrase is required to open each review. Forgotten passphrases cannot be recovered. Expired files are removed on this page.')
     items = storage.list_saved()

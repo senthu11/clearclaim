@@ -35,6 +35,8 @@ from billing.provenance import show_charge_source
 
 st.set_page_config(page_title="ClearClaim · Medical Bill Review", page_icon=":material/verified_user:", layout="wide")
 apply_design()
+if os.getenv('CLEARCLAIM_PUBLIC_DEMO') == '1':
+    st.info('Public educational demo — use synthetic data only. Uploads and entries are processed on the hosting server, not on your device, and are not sent to an LLM. Saved reviews are disabled. Download results before ending your session.')
 
 
 @st.cache_resource
