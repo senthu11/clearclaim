@@ -1,0 +1,19 @@
+streamlit>=1.66,<2
+langchain>=1.0,<2
+langchain-openai>=1.0,<2
+langgraph>=1.0,<2
+PyMuPDF>=1.24,<2
+pytesseract>=0.3.13,<0.4
+Pillow>=10,<13
+pandas>=2.2,<3
+python-dotenv>=1,<2
+scikit-learn>=1.5,<2
+langchain-keenable>=0.1,<1
+truststore>=0.10,<1
+rapidocr-onnxruntime>=1.4,<2
+openpyxl>=3.1,<4
+# Compatible Windows wheel; 4.0.2 is blocked by Application Control on this host.
+xxhash==3.6.0
+
+cryptography==50.0.2
+reportlab==5.1.0

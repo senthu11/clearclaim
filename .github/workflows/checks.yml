@@ -1,0 +1,15 @@
+name: Local application checks
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements.windows-py312.lock.txt
+      - run: python scripts/doctor.py
+      - run: python -m unittest discover -s tests -v
+      - run: python -m compileall -q app.py billing scripts

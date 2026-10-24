@@ -1,0 +1,24 @@
+# API keys and local configuration
+.env
+.env.*
+!.env.example
+.local-config/
+
+# Python and tools
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.uv-cache/
+.local-tools/
+
+# Local app state and generated private uploads
+.streamlit/secrets.toml
+uploads/
+outputs/
+*.log
+
+.local-reviews/
+
+.presentation-build/

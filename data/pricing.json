@@ -1,0 +1,11 @@
+[
+  {"code":"99213","description":"Established patient office visit","unit_price":"100.00","visit_type":"outpatient"},
+  {"code":"99214","description":"Extended established patient office visit","unit_price":"150.00","visit_type":"outpatient"},
+  {"code":"80053","description":"Comprehensive metabolic panel","unit_price":"50.00","visit_type":"any"},
+  {"code":"82947","description":"Blood glucose test","unit_price":"10.00","visit_type":"any"},
+  {"code":"82565","description":"Creatinine blood test","unit_price":"12.00","visit_type":"any"},
+  {"code":"85025","description":"Complete blood count with differential","unit_price":"30.00","visit_type":"any"},
+  {"code":"93000","description":"Electrocardiogram with interpretation","unit_price":"60.00","visit_type":"any"},
+  {"code":"71046","description":"Chest X ray two views","unit_price":"80.00","visit_type":"any"},
+  {"code":"99223","description":"Initial inpatient hospital evaluation","unit_price":"250.00","visit_type":"inpatient"}
+]
