@@ -203,7 +203,7 @@ def dashboard(kb):
         text.caption("Upload a PDF or bill image for a local review of charges, coding, and possible errors.")
         action.button("Choose a file", icon=":material/upload_file:", width="stretch", on_click=new_bill, kwargs={"upload": True})
     with st.container(key="private_note"):
-        st.markdown(":material/verified_user: **Your information stays on your computer.** Uploads and chat stay local. Cloud AI is limited to unchanged built-in synthetic examples.")
+        st.markdown(":material/verified_user: **Uploads and chat are not sent to an LLM.** Processing occurs where this app runs: your computer for desktop use, or the hosting server for the public demo. Use synthetic data only.")
 
 
 def providers(kb):

@@ -36,7 +36,7 @@ def clear_person():
 def person_details():
     stored = st.session_state.get("local_person", {})
     with st.container(key="personal_details"):
-        with st.expander("Personal details · optional and kept on this computer", expanded=False):
+        with st.expander("Personal details · optional and kept in this app session", expanded=False):
             st.caption("Stored for this session only. Name and reference can personalize your downloaded letter. "
                        "Age and sex are not used by the audit. These fields never enter the agent workflow or external requests.")
             with st.form("local_person_details"):
