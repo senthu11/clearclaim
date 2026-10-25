@@ -1,0 +1,146 @@
+1
+00:00:00,000 --> 00:00:03,890
+Welcome to ClearClaim, a medical bill review project
+
+2
+00:00:03,890 --> 00:00:09,051
+Complicated bills can leave patients unsure which charges to question
+
+3
+00:00:09,051 --> 00:00:15,933
+ClearClaim organizes the bill, shows supporting evidence, and helps prepare a clear
+response
+
+4
+00:00:15,933 --> 00:00:22,516
+This walkthrough uses screenshots of the working public demo and fictional billing
+data.
+
+5
+00:00:24,016 --> 00:00:28,480
+Start by opening the Issues to find sample from the overview
+
+6
+00:00:28,480 --> 00:00:34,357
+The Evidence workspace places the original document beside editable charge rows
+
+7
+00:00:34,357 --> 00:00:39,564
+Check the service, code, amount, quantity, and date against the source
+
+8
+00:00:39,564 --> 00:00:45,739
+Correct missing or inaccurate fields before selecting Confirm charges and run audit
+
+9
+00:00:45,739 --> 00:00:49,236
+Human review comes before the automated checks.
+
+10
+00:00:50,736 --> 00:01:01,528
+The sample audit reports eight hundred and forty dollars billed, seven findings, and
+a three hundred and forty dollar illustrative reduction
+
+11
+00:01:01,528 --> 00:01:09,776
+Rules identify possible repeated charges, panel overlap, pricing differences, and
+date or setting questions
+
+12
+00:01:09,776 --> 00:01:12,937
+Overlapping amounts are not counted twice
+
+13
+00:01:12,937 --> 00:01:15,866
+These figures use fictional references
+
+14
+00:01:15,866 --> 00:01:21,725
+They do not establish fraud, patient responsibility, or a guaranteed refund.
+
+15
+00:01:23,225 --> 00:01:27,952
+Open Findings and evidence to understand why a charge was flagged
+
+16
+00:01:27,952 --> 00:01:34,934
+Here, an office visit costs two hundred dollars against a fictional one hundred
+dollar reference
+
+17
+00:01:34,934 --> 00:01:40,752
+The app shows the original charge, the comparison rule, and the source reference
+
+18
+00:01:40,752 --> 00:01:48,025
+A useful next step is to ask the billing office for an itemized explanation and the
+applicable rate.
+
+19
+00:01:49,525 --> 00:01:51,254
+The user stays in control
+
+20
+00:01:51,254 --> 00:01:58,101
+Record an assessment and add notes after checking the documents or speaking with the
+billing office
+
+21
+00:01:58,101 --> 00:02:03,357
+A repeated service may be legitimate, and a flag may reflect missing context
+
+22
+00:02:03,357 --> 00:02:10,826
+Your assessment stays separate from the original audit so the evidence and your
+interpretation remain clear.
+
+23
+00:02:12,326 --> 00:02:19,218
+The Dispute letter tab turns selected findings into a draft request for clarification
+
+24
+00:02:19,218 --> 00:02:27,894
+Choose which findings to include, select a tone, and edit the wording before
+downloading a text or PDF copy
+
+25
+00:02:27,894 --> 00:02:32,596
+The report also offers Excel, Markdown, and JSON downloads
+
+26
+00:02:32,596 --> 00:02:35,596
+Review every export before sharing it
+
+27
+00:02:35,596 --> 00:02:41,515
+ClearClaim helps prepare questions; it does not send a complaint for you.
+
+28
+00:02:43,015 --> 00:02:45,994
+The public demo runs without API keys
+
+29
+00:02:45,994 --> 00:02:52,030
+Your locally stored keys were not uploaded to GitHub or the hosting service
+
+30
+00:02:52,030 --> 00:02:56,779
+Uploaded content and typed questions are not sent to an LLM
+
+31
+00:02:56,779 --> 00:03:03,701
+On the hosted app, processing happens on the hosting server, not on the visitor
+device
+
+32
+00:03:03,701 --> 00:03:05,552
+Use synthetic data only
+
+33
+00:03:05,552 --> 00:03:08,209
+Shared saved reviews are disabled
+
+34
+00:03:08,209 --> 00:03:15,775
+Try the demo using the address on screen, and download your results before ending the
+session.
